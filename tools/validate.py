@@ -39,10 +39,20 @@ def find_forbidden_fields(value: object, trail: str = "$") -> list[str]:
 
 def package_path_from_url(url: str) -> Path:
     parsed = urlparse(url)
-    marker = "/main/"
-    if parsed.netloc != "raw.githubusercontent.com" or marker not in parsed.path:
+    parts = parsed.path.strip("/").split("/")
+    expected_prefix = ["Amy3400", "einsatzraum-data-public"]
+    if (
+        parsed.scheme != "https"
+        or parsed.netloc != "raw.githubusercontent.com"
+        or len(parts) < 4
+        or parts[:2] != expected_prefix
+    ):
         raise ValueError(f"Unsupported package URL: {url}")
-    relative_path = parsed.path.split(marker, maxsplit=1)[1]
+
+    # parts[2] is an immutable commit SHA or a one-segment ref.
+    relative_path = Path(*parts[3:])
+    if ".." in relative_path.parts:
+        raise ValueError(f"Unsafe package path: {url}")
     return ROOT / relative_path
 
 
