@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "package": {
+    "id": "municipalities-northeim",
+    "title": "Gemeinden und öffentliche Kreis-Kontaktdaten",
+    "version": "0.1.0",
+    "region": {
+      "name": "Landkreis Northeim",
+      "country": "DE",
+      "state": "Niedersachsen",
+      "districtKey": "03155"
+    },
+    "generatedAt": "2026-08-02T22:30:00Z",
+    "dataStatus": "prototype-public-reference",
+    "reviewStatus": "source-list-confirmed",
+    "sensitivity": "public"
+  },
+  "sources": [
+    {
+      "id": "landkreis-municipalities",
+      "publisher": "Landkreis Northeim",
+      "title": "Der Landkreis stellt sich vor",
+      "url": "https://www.landkreis-northeim.de/portal/seiten/der-landkreis-stellt-sich-vor-900000004-23900.html",
+      "accessedAt": "2026-08-02",
+      "usedFor": [
+        "municipalityNames"
+      ],
+      "licenseNote": "Factual extraction; no copied editorial text."
+    },
+    {
+      "id": "landkreis-imprint",
+      "publisher": "Landkreis Northeim",
+      "title": "Impressum",
+      "url": "https://www.landkreis-northeim.de/portal/seiten/impressum-900000002-23900.html",
+      "accessedAt": "2026-08-02",
+      "usedFor": [
+        "districtGeneralContact"
+      ],
+      "licenseNote": "Publicly published official contact data."
+    }
+  ],
+  "municipalities": [
+    {
+      "id": "bad-gandersheim",
+      "name": "Bad Gandersheim"
+    },
+    {
+      "id": "bodenfelde",
+      "name": "Bodenfelde"
+    },
+    {
+      "id": "dassel",
+      "name": "Dassel"
+    },
+    {
+      "id": "einbeck",
+      "name": "Einbeck"
+    },
+    {
+      "id": "hardegsen",
+      "name": "Hardegsen"
+    },
+    {
+      "id": "kalefeld",
+      "name": "Kalefeld"
+    },
+    {
+      "id": "katlenburg-lindau",
+      "name": "Katlenburg-Lindau"
+    },
+    {
+      "id": "moringen",
+      "name": "Moringen"
+    },
+    {
+      "id": "noerten-hardenberg",
+      "name": "Nörten-Hardenberg"
+    },
+    {
+      "id": "northeim",
+      "name": "Northeim"
+    },
+    {
+      "id": "uslar",
+      "name": "Uslar"
+    }
+  ],
+  "publicContacts": [
+    {
+      "id": "landkreis-northeim-general",
+      "scope": "Landkreis Northeim",
+      "function": "Allgemeiner Kontakt der Kreisverwaltung",
+      "organization": "Landkreis Northeim",
+      "address": {
+        "street": "Medenheimer Str. 6/8",
+        "postalCode": "37154",
+        "city": "Northeim"
+      },
+      "phone": "05551 7080",
+      "email": "info@landkreis-northeim.de",
+      "availabilityNote": "Keine Einsatz- oder Bereitschaftsnummer; Erreichbarkeit vor Nutzung prüfen.",
+      "sourceId": "landkreis-imprint",
+      "lastVerifiedAt": "2026-08-02",
+      "verificationStatus": "public-source-confirmed"
+    }
+  ],
+  "notices": [
+    "Dieses Paket enthält noch keine Einwohnerzahlen, Netzbetreiber-Zuordnungen oder Einsatzkontakte.",
+    "Öffentlich auffindbar bedeutet nicht automatisch einsatzbereit oder rund um die Uhr erreichbar."
+  ]
+}
